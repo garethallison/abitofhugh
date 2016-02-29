@@ -20,7 +20,7 @@
 
 	// Adds the Hugh stylesheet
 	function hugh_enqueue_style() {
-		wp_enqueue_style( 'hugh', '/wp-content/plugins/aboh/css/hugh.css', false );
+		wp_enqueue_style( 'hugh', plugins_url( '/css/hugh.css', __FILE__ ), false );
 	}
 	add_action( 'wp_enqueue_scripts', 'hugh_enqueue_style' );
 
