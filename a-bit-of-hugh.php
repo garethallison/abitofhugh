@@ -28,7 +28,7 @@
 	// Adds the Hugh element to the front page of your site only
 	function hugh_front_page() {
 	if ( is_front_page() ) {
-		echo'<div id="hugh"></div>';
+		echo'<div id="hugh"></div>' . "\n";
 	    }
 	}
 	add_action( 'wp_footer', 'hugh_front_page' );
