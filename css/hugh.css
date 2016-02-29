@@ -1,0 +1,105 @@
+
+/**
+ * Animation keyframes
+ *
+ * Specify the start and end state of Hugh's face
+ */
+@-webkit-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@-moz-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/**
+ * Hugh's face
+ */
+#hugh {
+	display: block;
+	position: fixed;
+	z-index: 9999;
+	top: 3em;
+	left: 1em;
+	width: 10em;
+	height: 10em;
+	border: .35em solid #fff;
+	border-radius: 50%;
+	background-image: url('https://pbs.twimg.com/profile_images/659665453044924416/VcZHpKWm.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-box-shadow: 0 0 31px 1px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 0 31px 1px rgba(0,0,0,0.5);
+	box-shadow: 0 0 31px 1px rgba(0,0,0,0.5);
+
+	/* Eases the transition between regular and hover states smoothly */
+	-webkit-transition: all ease-in-out 0.2s;
+    -moz-transition: all ease-in-out 0.2s;
+    -ms-transition: all ease-in-out 0.2s;
+    -o-transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2;
+
+	opacity: 0;  /* Make Hugh's face invisible to begin with */
+	-webkit-animation:fadeIn ease-in 1;  /* Calls our keyframe named fadeIn, use animation ease-in and repeat it only once */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* Ensures that once animation is done, we remain at the last keyframe value (opacity: 1) */
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
+
+    /* Delays the fade-in of Hugh's face*/
+    -webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;
+	animation-delay: 2s;
+}
+
+	#hugh:hover {
+		-webkit-box-shadow: 0 0 31px 1px rgba(0,0,0,0.8);
+		-moz-box-shadow: 0 0 31px 1px rgba(0,0,0,0.8);
+		box-shadow: 0 0 31px 1px rgba(0,0,0,0.8);
+	}
+
+	/**
+	 * Text block below Hugh's face.
+	 */
+
+	#hugh::after {
+		display: inline-block;
+		position: relative;
+		top: 17.25em;
+		left: 7.5%;
+		padding: .5em .75em;
+		border-radius: .5em;
+		background-color: #21759b;
+		content: 'Hugh is watching you';
+		color: #fff;
+		font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+		text-transform: uppercase;
+		font-size: .6em;
+		font-weight: 700;
+	}
+
+/**
+ * Media queries for mobile-specific styles.
+ */
+@media only screen and (max-width: 1024px) {
+
+	#hugh {
+	    top: 4em;
+	    left: 5%;
+	    width: 6em;
+	    height: 6em;
+	    border: .25em solid #fff;
+	}
+
+		#hugh::after {
+			top: 2em;
+			left: 8em;
+			width: 13em;
+			font-size: .85em;
+			text-align: center;
+			
+		}
+
+}
