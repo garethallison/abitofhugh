@@ -9,7 +9,7 @@ Plugin URI: http://www.hughlashbrooke.com/
 Description:  Add a bit of Hugh Lashbrooke to your WordPress site and ensure that, no matter what you do, he'll be there to keep an eye on your progress.
 Author: Gareth Allison
 Version: 1.0
-Author URI: https://twitter.com/garethisatwi
+Author URI: https://twitter.com/garethisatwit
 */
 
 	// Adds the Hugh Google Font stylesheet for Open Sans
