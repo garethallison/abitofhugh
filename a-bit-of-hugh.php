@@ -32,5 +32,3 @@
 	    }
 	}
 	add_action( 'wp_footer', 'hugh_front_page' );
-
-?>
