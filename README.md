@@ -3,4 +3,4 @@ Add a bit of Hugh Lashbrooke to your WordPress site and ensure that, no matter w
 
 ## Goals
 * Replace static image with a dynamic Gravatar
-* LESS support
+* SASS support
